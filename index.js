@@ -1,11 +1,19 @@
 const express = require('express')
 const app= express()
+const { engine } = require('express-handlebars')
 
 const PORT = 3000
+
+/* sets up express-handlebars view engine */
+app.engine('handlebars', engine())
+app.set('view engine', 'handlebars')
+app.set('views', './views')
+
 
 app.get('/', (req, res) => {
     res.send('hello there')
 })
+
 
 
 /* Custom 404 Page. Should be below other routes */
