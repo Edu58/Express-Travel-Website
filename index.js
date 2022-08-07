@@ -11,7 +11,7 @@ app.set('views', './views')
 
 
 app.get('/', (req, res) => {
-    res.send('hello there')
+    res.render('home')
 })
 
 
