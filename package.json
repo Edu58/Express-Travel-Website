@@ -1,0 +1,30 @@
+{
+  "name": "travel-website",
+  "version": "1.0.0",
+  "description": "a travel website built with express and handlebars",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edu58/Express-Travel-Website.git"
+  },
+  "keywords": [
+    "express",
+    "nodejs"
+  ],
+  "author": "Edu58",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Edu58/Express-Travel-Website/issues"
+  },
+  "homepage": "https://github.com/Edu58/Express-Travel-Website#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
