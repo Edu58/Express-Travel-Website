@@ -1,6 +1,8 @@
 const express = require('express')
 const app= express()
 const { engine } = require('express-handlebars')
+const RandomFortune = require('./lib/fortunes')
+
 
 const PORT = 3000
 
@@ -13,23 +15,12 @@ app.set('view engine', 'handlebars')
 app.set('views', './views')
 
 
-const fortunes = [
-    "Conquer your fears or they will conquer you.",
-    "Rivers need springs.",
-    "Do not fear what you don't know.",
-    "You will have a pleasant surprise.",
-    "Whenever possible, keep it simple.",
-]
-
-
 app.get('/', (req, res) => {
     res.render('home')
 })
 
 /* add dynamic content to views */
 app.get('/fortune', (req, res) => {
-    const RandomFortune = fortunes[Math.floor(Math.random() * fortunes.length)]
-
     res.render('fortunes', {fortune: RandomFortune})
 })
 
