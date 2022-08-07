@@ -4,6 +4,9 @@ const { engine } = require('express-handlebars')
 
 const PORT = 3000
 
+/* configure static files folder path */
+app.use(express.static(__dirname + '/public'))
+
 /* sets up express-handlebars view engine */
 app.engine('handlebars', engine())
 app.set('view engine', 'handlebars')
